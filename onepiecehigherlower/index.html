@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>One Piece Higher Lower Game</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+	<body>
+		<script type="text/javascript" src="script.js"></script>
+		<div id="startScreen">
+			<div id="instructions">
+				<p>The aim of the game is to guess if the bounty on the right
+					is higher or lower than the one of the left. If you guess 
+					correctly, you can guess another bounty with the previous 
+					one. Try to guess as many correctly in row as you can!</p>
+				<button id="startButton" onclick="startFromInstructions()">Start</button>
+				<button id="startButton" onclick="switchStartInstructions('instructions', 'menu')">Back</button>
+			</div>
+			<div id="menu">
+				<h1>One Piece</h1>
+				<h1>Higher Lower Game</h1>
+				<button id="startButton" onclick="startGame('start')">Start</button>
+				<button id="startButton" onclick="switchStartInstructions('menu', 'instructions')">Instructions</button>
+			</div>
+		</div>
+		<div id="winScreen">
+			<div id="winMenu">
+				<h2>You got them all right!</h2>
+				<h2 id="winScore"></h2>
+				<button id="startButton" onclick="startGame('win')">Play Again</button>
+				<button id="startButton" onclick="goToMenu('win')">Back</button>
+			</div>
+		</div>
+		<div id="loseScreen">
+			<div id="loseMenu">
+				<h2>You lost</h2>
+				<h2 id="loseScore"></h2>
+				<button id="startButton" onclick="startGame('lose')">Play Again</button>
+				<button id="startButton" onclick="goToMenu('lose')">Back</button>
+			</div>
+		</div>
+		<div id="gameScreen">
+			<div id="score">
+			</div>
+			<div id="highScore">
+			</div>
+			<div id="left-side" class="column">
+				<div class="cardText">
+					<div id= 'left-side-stats'>
+					</div>
+				</div>
+			</div>
+  			<div id="right-side" class="column">
+  				<div class="cardText">
+  					<div id="right-side-stats">
+  					</div>
+  					<div id="btn-group">
+						<button id = 'highLow' onclick="clickedButton('higher')">Higher</button>
+						<button id = 'highLow' onclick="clickedButton('lower')">Lower</button>
+					</div>
+					<div id='bounty'>
+  					</div>
+  				</div>
+			</div>
+			<div id = 'result-area'>
+				<div id="result">
+					
+				</div>	
+			</div>
+		
+		</div>
+	</body>
+</html>

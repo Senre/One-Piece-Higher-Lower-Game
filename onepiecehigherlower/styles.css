@@ -1,0 +1,187 @@
+* {
+	margin: 0;
+}
+
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+#startScreen{
+	height: 100vh;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+					  rgba(0, 0, 0, 0.5)),
+					  url('imgs/startpic.png');
+	background-position: center center;
+	background-size: cover;
+}
+
+#winScreen {
+	display: none;
+	height: 100vh;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+					  rgba(0, 0, 0, 0.5)),
+					  url('imgs/winpic.jpeg');
+	background-position: center center;
+	background-size: cover;
+}
+
+#loseScreen {
+	display: none;
+	height: 100vh;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+					  rgba(0, 0, 0, 0.5)),
+					  url('imgs/losepic.png');
+	background-position: center center;
+	background-size: cover;
+}
+
+#gameScreen {
+	display: none;
+}
+
+#instructions, #menu, #winMenu, #loseMenu {
+	top: 40%;
+	text-align: center;
+	position: relative;
+	justify-content: center;
+}
+
+#menu {
+
+}
+
+#instructions {
+	background: rgba(0, 0, 0, 0.5);
+	display: none;
+	vertical-align: middle;
+	width: 30%;
+	border: 5px solid white;
+	border-radius: 30px;
+	padding: 30px;
+	margin: auto;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  height: 100vh;
+  background-position: center center;
+  background-size: cover;
+  background-color: black;
+}
+
+.cardText {
+	top: 40%;
+	text-align: center;
+	position: relative;
+	justify-content: center;
+	/*
+	top : 40%;
+	margin: 0 auto;
+	width: 25%;
+	*/
+}
+
+p {
+	color: white;
+	font-size: 20px;
+}
+
+h1, h2, h3 {
+	color: white;
+	font-size: 40px;
+}
+
+h4 {
+	color: white;
+	font-size: 30px;
+}
+
+h5 {
+	margin-left: -100%;
+	margin-right: -100%;
+	color: white;
+	font-size: 50px;
+
+
+}
+
+button {
+	padding: 16px;
+	width:140px;
+	border-radius: 20px;
+	cursor: pointer;
+	background: none;
+	border: solid 2px white;
+	color: white;
+	font-size: 20px;
+}
+
+#btn-group button {
+
+}
+
+#startButton {
+	margin-top: 10px;
+	transition-duration: 0.2s;
+}
+
+#highLow:hover, #startButton:hover {
+	background-color: white;
+	color: black;
+}
+
+#highLow {
+	margin-top: 10px;
+	left: 50%;
+	border: solid 2px white;
+	color: white;
+	transition-duration: 0.2s;
+}
+
+#bounty {
+	opacity: 0;
+	transition: 1s opacity;
+}
+
+#result-area {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: auto;
+	width: 100px;
+	height: 100px;
+
+}
+
+#result {
+	font-size: 40px;
+	color: white;
+	line-height: 100px;
+	text-align: center;
+	width: 100px;
+	height: 100px;
+	margin-left: -50px;
+	margin-top:  -50px;
+	border-radius: 50%;
+	border: 2px solid white;
+	opacity: 0;
+	transition: 1s opacity;
+}
+
+#score {
+	position: absolute;
+ 	top: 8px;
+ 	left: 16px;
+}
+
+#highScore {
+	position: absolute;
+ 	top: 8px;
+ 	right: 16px;
+}
