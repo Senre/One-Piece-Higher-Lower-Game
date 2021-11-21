@@ -90,6 +90,7 @@ function newRound() {
 	changeRightSide();
 	if (round+2 < bountiesLength) {
 		loadimage();
+	}
 	showResult();
 
 	document.getElementById('btn-group').style.display = 'block';
@@ -123,6 +124,7 @@ function changeRightSide() {
 
 function loadimage() {
 	document.getElementById('loadimg').style = `background-image: url('imgs/${allBounties[round+2][2]}');`;
+}
 
 function changeScore() {
 	document.getElementById('score').innerHTML = `<h4>Score: ${round}<h4>`;
