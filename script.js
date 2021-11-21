@@ -30,6 +30,8 @@ let allBounties = [	['Monkey D. Luffy', 1500000000, 'luffypic.jpg'],
 			       // ['Gecko Moria',320000000,'geckomoria.png'],
 			       ];
 
+let bountiesLength = allBounties.length;
+
 function clickedButton(choice) {
 	revealBounty();
 
@@ -87,6 +89,9 @@ function newRound() {
 	changeScore();
 	changeLeftSide();
 	changeRightSide();
+	if (round+2 < bountiesLength) {
+		loadimage();
+	}
 	showResult();
 
 	document.getElementById('btn-group').style.display = 'block';
@@ -116,6 +121,10 @@ function changeRightSide() {
 															<h4>bounty is</h4>`;
 	document.getElementById('bounty').style.transition = '0s opacity';
 	document.getElementById('bounty').style.opacity = '0';
+}
+
+function loadimage() {
+	document.getElementById('loadimg').style = `background-image: url('imgs/${allBounties[round+2][2]}');`;
 }
 
 function changeScore() {
